@@ -1,0 +1,35 @@
+git init: crear repo(solo esa vez)
+git add ".html": agrega archivo temporal,monitorizarlo-A(antes U)
+git commit -m "mensaje en comillas":confirmar cambios-vacio
+
+git reset --hard "codigo":volver atras por mal cambio
+git revert HEAD
+git log:ver commits
+
+rama:linea de trabajo distinta a la principal o version
+
+git remote add origin "url":conectarte remota
+
+git push origin master:subir repo local
+
+git clone "url":clonar repo remota
+git pull origin "master o rama"(git remote 1°vez):actualizar cambios en repo remota
+a local(solo agrega cambios no toda la repo remota)
+
+git branch "rama1 o nombre":crear rama
+*git checkout -b feature/ui-index(convencion feature/lo q haras):
+crear rama
+--hacer cambios---
+1)git add .
+2)git commit -m ""
+
+git checkout "rama1 o master":cambiar de rama
+
+1) y 2) para q cambios sean exclusivos de rama situada(rama1)
+
+git merge ramaOrigen ramaDestino:cambios en rama1 estaran master
+--como he hecho un cambio--
+hacer 1) y 2)
+git merge "rama1":cambios en rama1 estaran en rama situada(master)
+
+git push origin "rama":mandar rama a remoto
