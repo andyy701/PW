@@ -1,0 +1,3 @@
+control a:seleccionar todo
+control-shift-p:
+format-format selection:ordenar codigo
