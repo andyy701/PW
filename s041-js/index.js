@@ -92,6 +92,12 @@ const legalAge = student => student.age >= 18;
 //Modifique el ejercicio anterior para considerar un texto de respuesta
 const legalAgel = studet => student.age >=18 ? "Mayor de edad" : "Menor de edad";
 
+window.onload = _ =>{
+    document.getElementById("btnTest").onclick=_=>{
+        showResult("Hola Ulima");
+    }
+}
+
 function showResult(result) {
     //Obtenemos una referencia al elemento HTML con ese ID
     //Podemos modificar sus atributos
