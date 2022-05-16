@@ -13,9 +13,11 @@ git remote add origin "url":conectarte remota
 git push origin master:subir repo local
 
 git clone "url":clonar repo remota
-git pull origin "master o rama"(git remote 1°vez):actualizar cambios en repo remota
-a local(solo agrega cambios no toda la repo remota)
+git pull origin "master o rama"(git remote 1°vez):actualizar cambios 
+hechos por otros en repo remota a local(solo agrega cambios no toda 
+la repo remota)
 
+(
 git branch "rama1 o nombre":crear rama
 *git checkout -b feature/ui-index(convencion feature/lo q haras):
 crear rama
@@ -32,4 +34,12 @@ git merge ramaOrigen ramaDestino:cambios en rama1 estaran master
 hacer 1) y 2)
 git merge "rama1":cambios en rama1 estaran en rama situada(master)
 
+git push origin "rama":mandar rama a remoto
+)
+=
+git checkout -b "nombre rama" crear rama
+--hacer cambios---
+1) y 2) para q cambios sean exclusivos de rama situada(rama1)
+git checkout "rama1 o master":cambiar de rama
+git merge "rama1":cambios en rama1 estaran en rama situada(master)
 git push origin "rama":mandar rama a remoto
