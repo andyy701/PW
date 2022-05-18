@@ -1,0 +1,9 @@
+Pasos:
+1)en cmd: cd Desktop,git clone https://github.com/nombreusuario/Proyecto-PW,cd Proyecto-PW, code .
+2)en vscode,en terminal: 
+2.1.git checkout -b "nombre rama": crear rama y situarte en ella,
+2.2.--haces tus cambios---,
+git add . y git commit -m "comentario":para q cambios sean exclusivos de rama situada(rama1),
+2.3.git checkout master:cambiar de rama master o otra,
+2.4.git merge "rama1":cambios en rama1 estaran en rama situada(master),
+2.5.git push origin master:mandar rama a remoto
