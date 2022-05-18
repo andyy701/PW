@@ -4,7 +4,7 @@ git commit -m "mensaje en comillas":confirmar cambios-vacio
 
 git reset --hard "codigo":volver atras por mal cambio
 git revert HEAD
-git log:ver commits
+git log:ver todos los commits
 
 rama:linea de trabajo distinta a la principal o version
 
