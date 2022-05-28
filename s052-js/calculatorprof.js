@@ -2,10 +2,13 @@
   Funcion que se llamara luego de la carga de la pagina
   Permite asociar las funciones respectivas a los eventos de los botones
 */
+let values=[]
+let i=0;
 const main = _ => {
     buttonAdd = document.getElementById("btnAdd");
     butonMultiply = document.getElementById("btnMultiply");
     buttonClean = document.getElementById("btnClean");
+    
     
     buttonAdd.addEventListener("click", getResult);
     butonMultiply.addEventListener("click", getResult);
@@ -21,10 +24,13 @@ const main = _ => {
     let operation = getOperation(event);
     let operators = getOperators();
     let result = compute(operation, operators);
+    addValue(result);//adicional
     showAnswer(result);
   }
-  
-  
+  const addValue =(result)=>{
+     values[i]=result;
+     i+=1;
+  }
   //Permite obtener la operacion realizada (Usa el texto del boton)
   const getOperation = event => {
     let target = event.target
@@ -58,7 +64,8 @@ const main = _ => {
   
   //Permite mostrar la respuesta en el formato indicado (las mas recientes primero)
   const showAnswer = result => {
-    let prevText = document.getElementById("txtResult").innerHTML;
-    document.getElementById("txtResult").innerHTML = result + "\n" + prevText;
+    //let prevText = document.getElementById("txtResult").innerHTML;
+    //document.getElementById("txtResult").innerHTML = result + "\n" + prevText;
+    document.getElementById("txtResult").innerHTML = result + "\n" + values;
   }
   
