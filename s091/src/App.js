@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {useState} from 'react'
 
 const Greeting =_=>{
   return(
@@ -19,6 +19,27 @@ const Greeting2 =({name,city})=>{
     <h2>hola {name} saludos desde {city}</h2>
   )
 }
+
+
+const ClickCounter =_=>{
+  const[clickCount,setClickCount]=useState(0);
+
+  const aumentar=_=>setClickCount(clickCount+1);
+  //setClickCount(clickCount+1);
+  return(
+    <div>
+      <div>{clickCount}
+      </div>
+      <button onClick={aumentar}>aumentar</button>
+    </div>
+  );
+
+ 
+}
+
+
+
+
 function App() {
   return (
     <div className="App">
@@ -26,6 +47,7 @@ function App() {
         <Greeting/>
         <Greeting1 name="Mariana"/>
         <Greeting2 name="Alejandra" city="Chiclayo"/>
+        <ClickCounter/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
